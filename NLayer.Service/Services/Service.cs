@@ -21,7 +21,7 @@ namespace NLayer.Service.Services
             _unitOfWorks = unitOfWorks;
         }
 
-        public async Task<T> AddAsyncAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             await _repository.AddAsync(entity);
             await _unitOfWorks.CommitAsync();

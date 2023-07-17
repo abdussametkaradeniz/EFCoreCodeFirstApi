@@ -12,7 +12,7 @@ namespace NLayer.Core.Services {
         //direkt veri tabanına gitmez döndükten sonra işlem yapılabilir
         IQueryable<T> where(Expression<Func<T, bool>> expression);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
-        Task<T> AddAsyncAsync(T entity);
+        Task<T> AddAsync(T entity);
         Task RemoveAsync(T entity);
         Task UpdateAsync(T entity);
         Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
