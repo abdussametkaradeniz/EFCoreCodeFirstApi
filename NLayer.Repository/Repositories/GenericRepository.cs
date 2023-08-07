@@ -41,7 +41,7 @@ namespace NLayer.Repository.Repositories
             return _dbSet.AsNoTracking().AsQueryable();
         }
 
-        public async Task<T> GetByIdAsync(int Id)
+        public async Task<T?> GetByIdAsync(int Id)
         {
             return await _dbSet.FindAsync(Id);
         }

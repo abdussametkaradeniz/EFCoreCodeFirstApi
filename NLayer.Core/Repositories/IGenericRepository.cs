@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core.Repositories {
     public interface IGenericRepository<T> where T : class {
-        Task<T> GetByIdAsync(int Id);
+        Task<T?> GetByIdAsync(int Id);
         IQueryable<T> GetAll();
         //direkt veri tabanına gitmez döndükten sonra işlem yapılabilir
         IQueryable<T> where(Expression<Func<T,bool>> expression);
